@@ -1,0 +1,35 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://39.106.88.59:3306/dev_person?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: dev_person
+    password: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #Freemarker
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    servlet:
+      content-type: text/html
+
+ship:
+  server-web-socket-url: ws://127.0.0.1:9999
+  user-password-salt: d5ec0a02
+
+nacos:
+  discovery:
+    server-addr: 39.106.88.59:8848/
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+
+logging:
+  level:
+    com.person: debug
+    org.springframework: warn
+

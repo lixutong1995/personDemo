@@ -10,7 +10,9 @@
     <version>1.0.0</version>
     <modules>
         <module>ship-client-spring-boot-starter</module>
+        <module>ship-admin</module>
+        <module>ship-common</module>
+        <module>ship-gate-example</module>
+        <module>ship-server</module>
     </modules>
-
-
 </project>
